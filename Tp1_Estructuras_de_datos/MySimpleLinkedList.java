@@ -14,29 +14,74 @@ public class MySimpleLinkedList<T> {
 	}
 	
 	public T extractFront() {		
-		// TODO
+		Node<T> aux = this.first;
+		this.first = this.first.getNext();
+		aux.setNext(null);
 		return null;
 	}
 
 	public boolean isEmpty() {
-		// TODO
-		return false;
+		if (this.first != null)
+			return false;
+		else 
+			return true;
 	}
 	
 	public T get(int index) {
-		// TODO
+		if (!this.isEmpty()){
+			int pos = 0;
+			Node<T> aux = this.first;
+			while(pos!=index && aux.getNext()!=null) {
+				aux = aux.getNext();
+				pos++;
+			}
+			if(pos==index) {				
+				return aux.getInfo();
+			} else {
+				return null;
+			}
+		}
 		return null;
 	}
 	
 	public int size() {
-		// TODO
-		return 0;
+		int pos = 0;
+		Node<T> aux = this.first;
+		while(aux.getNext()!=null) {
+			aux = aux.getNext();
+			pos++;
+		}
+		return pos;
+	}
+	
+	public int indexOf(T info) {
+		if (this.isEmpty()) {
+			return -1;
+		}	
+		int pos = 0;
+		Node<T> aux = this.first;
+		while (aux!=null && aux.getInfo()!=info) {
+			aux = aux.getNext();
+		}
+		if (aux.getInfo()==info)
+			return pos;
+		else
+			return -1;
 	}
 	
 	@Override
 	public String toString() {
-		// TODO
-		return "";
+		if (this.isEmpty()) {
+			return "[]";
+		}			
+		String txt = new String("[");
+		Node<T> aux = this.first;
+		while (aux!=null) {
+			txt+=aux.getInfo() + ", ";
+			aux = aux.getNext();
+		}
+		txt+="]";
+		return txt;
 	}
 	
 }
