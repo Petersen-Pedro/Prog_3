@@ -1,11 +1,13 @@
+package Tp1_Ejercicio5;
+
 import java.util.Iterator;
 
-public class MySimpleLinkedList<T> implements Iterable<T> {
+public class MyLinkedList<T> implements Iterable<T> {
 	
 	private Node<T> first;
 	private int size;
 	
-	public MySimpleLinkedList() {
+	public MyLinkedList() {
 		this.first = null;
 	}
 	
@@ -46,16 +48,6 @@ public class MySimpleLinkedList<T> implements Iterable<T> {
 		return null;
 	}
 	
-	public int size() {
-		int pos = 0;
-		Node<T> aux = this.first;
-		while(aux.getNext()!=null) {
-			aux = aux.getNext();
-			pos++;
-		}
-		return pos;
-	}
-	
 	public int indexOf(T info) {
 		if (this.isEmpty()) {
 			return -1;
@@ -74,25 +66,23 @@ public class MySimpleLinkedList<T> implements Iterable<T> {
 	@Override
 	public String toString() {
 		return "[" + this.first.toString() + "]";
-		/**
-		if (this.isEmpty()) {
-			return "[]";
-		}			
-		String txt = new String("[");
-		Node<T> aux = this.first;
-		while (aux!=null) {
-			txt+=aux.getInfo() + ", ";
-			aux = aux.getNext();
-		}
-		txt+="]";
-		return txt;
-		 */
 	}
 
 	@Override
 	public Iterator<T> iterator() {
-		// A LA LISTA LE VAMOS A ESTAR PIDIENDO EL ITERADOR PARA PODER ITERAR SOBRE ELLA
+		// A LA LISTA LE VAMOS A ESTAR PIDIENDO 
+		// EL ITERADOR PARA PODER ITERAR SOBRE ELLA
 		return new MyIterator<>(this.first);
+	}
+
+	public int getSize() {
+		int pos = 0;
+		Node<T> aux = this.first;
+		while(aux.getNext()!=null) {
+			aux = aux.getNext();
+			pos++;
+		}
+		return pos;
 	}
 	
 }
