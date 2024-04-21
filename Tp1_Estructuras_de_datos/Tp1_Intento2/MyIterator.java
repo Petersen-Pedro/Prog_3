@@ -1,17 +1,13 @@
-package Tp1_Ejercicio5;
+package Tp1_Intento2;
 
 import java.util.Iterator;
 
 public class MyIterator<T> implements Iterator<T> {
 
-	private Node<T> cursor; //PRIMER NODO DE LA LISTA
+	private Node<T> cursor;
 	
-	public MyIterator(Node<T> cursor){
-		this.cursor = cursor;
-	}
-	
-	public Node<T> getCursor() {
-		return cursor;
+	public MyIterator(Node<T> nodo) {
+		this.cursor = nodo;
 	}
 	
 	@Override
@@ -26,5 +22,5 @@ public class MyIterator<T> implements Iterator<T> {
 		this.cursor = this.cursor.getNext();
 		return info;
 	}
-
+	
 }

@@ -1,18 +1,12 @@
-package Tp1_Ejercicio5;
+package Tp1_Intento2;
 
-
-public class Node<T> implements Comparable<Node<T>> {
+public class Node<T> {
 
 	private T info;
 	private Node<T> next;
 
 	public Node() {
 		this.info = null;
-		this.next = null;
-	}
-	
-	public Node(T info) {
-		this.info = info;
 		this.next = null;
 	}
 	
@@ -36,12 +30,11 @@ public class Node<T> implements Comparable<Node<T>> {
 	public void setInfo(T info) {
 		this.info = info;
 	}
-
+	
 	@Override
-	public int compareTo(Node<T> other) {
-	       return 0;//info.compareTo(other.info);
-    }
-
-
+	public String toString() {
+		String txt = (String) this.getInfo() + ", ";
+		return txt;
+	}
 
 }
