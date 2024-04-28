@@ -22,15 +22,44 @@ public class Main {
 			Integer i = it.next();
 			System.out.print(i);
 		}
+		System.out.print("test: extractFront");	
+		myList.extractFront();
+		for(int i : myList) {
+			System.out.print(i + " ");			
+		}
 		*/
-		
+
+		System.out.print("Lista 1: ");	
 		for(int i : myList) {
 			System.out.print(i + " ");			
 		}
 
-		System.out.print("test: extractFront");	
-		myList.extractFront();
-		for(int i : myList) {
+		
+		//EJERCICIO 5
+
+		MySimpleLinkedList<Integer> myList2 = new MySimpleLinkedList<Integer>();
+
+		myList2.insertFront(22);
+		myList2.insertFront(15);
+		myList2.insertFront(22);
+		myList2.insertFront(8);
+		myList2.insertFront(7);
+		myList2.insertFront(43);
+		myList2.insertFront(5);
+		myList2.insertFront(24);
+		myList2.insertFront(32);
+
+		System.out.println("\n");
+		System.out.print("Lista 2: ");	
+		for(int i : myList2) {
+			System.out.print(i + " ");			
+		}
+		
+		MySimpleLinkedList<Integer> newList = myList.listaElementosComunes(myList2);
+		
+		System.out.println("\n");
+		System.out.print("Lista Nueva: ");
+		for(int i : newList) {
 			System.out.print(i + " ");			
 		}
 
