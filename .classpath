@@ -7,5 +7,6 @@
 	</classpathentry>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="src" path="Tp1_Estructuras_de_datos"/>
+	<classpathentry kind="src" path="Tp2_Recursión_y_Ordenamiento"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
