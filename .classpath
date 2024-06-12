@@ -7,5 +7,10 @@
 	</classpathentry>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="src" path="Tp1_Estructuras_de_datos"/>
+	<classpathentry kind="src" path="Tp2_Arboles"/>
+	<classpathentry kind="src" path="Tp4_Grafos"/>
+	<classpathentry kind="src" path="Tp3_Hashing"/>
+	<classpathentry kind="src" path="Tp5_Backtracking"/>
+	<classpathentry kind="src" path="Tp6_Greedy"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
