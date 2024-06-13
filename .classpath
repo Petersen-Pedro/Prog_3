@@ -7,10 +7,14 @@
 	</classpathentry>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="src" path="Tp1_Estructuras_de_datos"/>
+<<<<<<< HEAD
 	<classpathentry kind="src" path="Tp2_Arboles"/>
 	<classpathentry kind="src" path="Tp4_Grafos"/>
 	<classpathentry kind="src" path="Tp3_Hashing"/>
 	<classpathentry kind="src" path="Tp5_Backtracking"/>
 	<classpathentry kind="src" path="Tp6_Greedy"/>
+=======
+	<classpathentry kind="src" path="Tp2_Recursión_y_Ordenamiento"/>
+>>>>>>> 62d64656f273c565735ea15fbbf2328ed3853f6d
 	<classpathentry kind="output" path="bin"/>
 </classpath>
